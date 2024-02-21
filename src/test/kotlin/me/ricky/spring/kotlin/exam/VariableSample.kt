@@ -1,4 +1,4 @@
-package me.ricky.spring.kotlin.exam.varibale
+package me.ricky.spring.kotlin.exam
 
 class VariableSample {
     companion object {
