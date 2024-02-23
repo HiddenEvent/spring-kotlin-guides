@@ -1,18 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.22"
-    kotlin("plugin.spring") version "1.9.22" apply false
-    id("org.springframework.boot") version "3.2.2" apply false
-    id("io.spring.dependency-management") version "1.1.4" apply false
-
+    kotlin("jvm")
+    kotlin("plugin.spring") apply false
+    id("org.springframework.boot") apply false
+    id("io.spring.dependency-management") apply false
 }
 
+java.sourceCompatibility = JavaVersion.VERSION_17
 
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-}
+val projectGroup: String by project
+val applicationVersion: String by project
 
 configurations {
     compileOnly {
@@ -22,8 +20,8 @@ configurations {
 
 
 allprojects {
-    group = "me.ricky.spring"
-    version = "0.0.1-SNAPSHOT"
+    group = projectGroup
+    version = applicationVersion
 
     repositories {
         mavenCentral()
