@@ -1,6 +1,9 @@
 rootProject.name = "kotlin"
 
-include("kotlin-api")
+include(
+    "kotlin-api",
+    "support:logging"
+)
 
 pluginManagement {
     val kotlinVersion: String by settings
