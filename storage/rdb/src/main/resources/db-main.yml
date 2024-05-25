@@ -1,0 +1,40 @@
+spring:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.default_batch_fetch_size: 100
+
+---
+spring.config.activate.on-profile: local
+
+spring:
+  jpa:
+    database: mysql
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+
+kotlin-api:
+  datasource:
+    url: jdbc:mysql://localhost:3306/oneid?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Seoul
+    username: "oneidadmin" # DB
+    password: "password" # DB
+
+---
+spring.config.activate.on-profile: local-dev
+
+---
+spring.config.activate.on-profile: dev
+
+---
+spring.config.activate.on-profile: stg
+
+---
+spring.config.activate.on-profile: live

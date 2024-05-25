@@ -2,10 +2,12 @@ rootProject.name = "kotlin"
 
 include(
     "kotlin-api",
-    "support:logging"
+    "support:logging",
+    "storage:rdb",
 )
 
 pluginManagement {
+    // [gradle.properties] file을 읽어 설정값을 가져올 수 있음
     val kotlinVersion: String by settings
     val springBootVersion: String by settings
     val springDependencyManagementVersion: String by settings

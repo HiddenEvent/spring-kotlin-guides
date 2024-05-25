@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm")
     kotlin("plugin.spring") apply false
-    id("org.springframework.boot") apply false
+    id("org.springframework.boot")
     id("io.spring.dependency-management")
 }
 

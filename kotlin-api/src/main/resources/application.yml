@@ -1,10 +1,6 @@
-spring.application.naame: kotlin
+spring.application.name: kotlin-api
 spring.profiles.active: local
 
-spring:
-  config:
-    import:
-      - logging.yml
 ---
 spring.config.activate.on-profile: local
 
